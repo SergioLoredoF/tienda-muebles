@@ -1,0 +1,112 @@
+
+/* GLOBALES */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-inline: auto;
+}
+
+
+/* Header y navegacion */
+
+.nombre-sitio {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-nav {
+    border-color: #e1e1e1;
+    border-top-style: solid;
+    border-width: 0.1rem;
+}
+
+.nav-principal {
+    padding: 1rem 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-principal a {
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+}
+
+.nav-principal a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('../img/principal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+}
+
+
+/* LISTADO DE CATEGORIAS */
+
+.categorias h2 {
+    text-align: center;
+    margin: 6rem 0;
+}
+
+.categoria a{
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-radius: 0px 0px .5px 5px;
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
