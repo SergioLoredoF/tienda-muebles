@@ -1,15 +1,35 @@
 
 /* GLOBALES */
-
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 52.5%; /* 62.5%;  1rem = 10px */
 }
 
-*,
-*::before,
-*::after {
+*, *:before, *:after {
     box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 a {
@@ -17,23 +37,32 @@ a {
     color: #000;
 }
 
-h2 {
-    font-size: 3rem;
-}
-
 img {
     max-width: 100%;
     display: block;
 }
 
-body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+.btn:hover {
+    background-color: #769c02;
 }
+
+/* Utilidades */
+
+.text-center {
+    text-align: center;
+}
+
+/* Contenedores */
 
 .contenedor {
     max-width: 120rem;
@@ -45,9 +74,7 @@ h1, h2, h3 {
 
 .nombre-sitio {
     margin-top: 5rem;
-    margin-bottom: 5rem;
     text-align: center;
-    font-size: 4rem;
 }
 
 .nombre-sitio span {
@@ -82,14 +109,14 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     background-size: cover;
     height: 45rem;
+    background-position: center -17rem;
 }
 
 
 /* LISTADO DE CATEGORIAS */
 
-.categorias h2 {
-    text-align: center;
-    margin: 6rem 0;
+.categorias {
+    padding-top: 5rem;
 }
 
 .categoria a{
@@ -110,3 +137,139 @@ h1, h2, h3 {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+/* BLOQUE NOSOTROS */
+
+.sobre-nosotros {
+    background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+    margin-top: 5rem;
+}
+
+.sobre-nosotros-flex {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.texto-nosotros {
+    flex-basis: 47%;
+    color: #fff;
+}
+
+/* LISTADO PRODUCTOS */
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.producto:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img
+ {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0;
+    padding: 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+/* FOOTER */
+
+.site-footer {
+    margin-top: 4rem;
+    padding: 3rem 3rem 0 3rem ;
+    background-color: rgb(249, 244, 238);
+    border-top: #e1e1e1 solid 1px;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-column nav a {
+    display: block;
+    text-align: center;
+}
+
+.footer-column nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-column:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+ 
