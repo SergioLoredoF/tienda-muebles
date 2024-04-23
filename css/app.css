@@ -100,6 +100,15 @@ img {
     justify-content: space-between;
 }
 
+@media (max-width: 560px) {
+    .nav-principal {
+        padding: 1rem 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .nav-principal a {
     box-sizing: border-box;
     padding: 1rem 3rem;
@@ -131,6 +140,7 @@ img {
     text-align: center;
     padding: 2rem;
     font-size: 2rem;
+    max-width: 100%;
 }
 
 .categoria a:hover {
@@ -145,6 +155,18 @@ img {
     gap: 20px;
 }
 
+@media (max-width: 560px) {
+    .listado-categorias {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .categoria img {
+        width: 100%;
+    }
+}
+
 /* BLOQUE NOSOTROS */
 
 .sobre-nosotros {
@@ -156,10 +178,39 @@ img {
     margin-top: 5rem;
 }
 
+@media (max-width: 560px) {
+    .sobre-nosotros {
+        background-image: linear-gradient( to bottom, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg);
+        height: 400px;
+        padding: 0;
+    }
+
+    .sobre-nosotros-flex{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .texto-nosotros {
+        flex-basis: 27%;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+@media (max-width: 455px) {
+
+    .sobre-nosotros {
+        height: 600px;
+    }
+
+    .texto-nosotros {
+        flex-basis: 17%;
+    }
+}
+
 .sobre-nosotros-flex {
     display: flex;
     justify-content: flex-end;
-    
 }
 
 .texto-nosotros {
@@ -252,6 +303,43 @@ img {
     font-weight: 900;
 }
 
+@media (max-width: 984px) {
+    .producto:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (max-width: 742px) {
+    .producto:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .producto:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .producto img {
+        height: 17rem;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    .producto:not(.producto:nth-child(1)){
+        grid-column: 1/7;
+    }
+
+}
+
 /* FOOTER */
 
 .site-footer {
@@ -278,6 +366,17 @@ img {
 .footer-column:nth-child(4) {
     grid-column-start: 1;
     grid-column-end: 4;
+}
+
+@media (max-width: 560px) {
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-column:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
 }
 
 /* NOSOTROS */
